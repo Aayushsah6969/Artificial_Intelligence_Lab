@@ -1,0 +1,23 @@
+# Write a Python code to rotate a given 2D square matrix (NxN) by 90 degrees
+# clockwise in-place. The function should modify the original matrix and return the
+# modified matrix.
+
+def rotate_matrix(matrix):
+    n = len(matrix)
+    # Transpose the matrix
+    for i in range(n):
+        for j in range(i, n):
+            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+    # Reverse each row
+    for i in range(n):
+        matrix[i].reverse()
+    return matrix
+
+# Example usage:
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+rotated_matrix = rotate_matrix(matrix)
+print(rotated_matrix)   
