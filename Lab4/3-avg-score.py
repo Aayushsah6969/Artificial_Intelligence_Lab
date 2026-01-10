@@ -2,12 +2,12 @@
 # scores, WAP to calculate the average score for each student and return it as a
 # dictionary.
 
-def calculate_average_scores(scores_dict):
+def cas(scores):
     # Create an empty dictionary to store average scores
     average_scores = {}
     
     # Loop through each student and their scores in the input dictionary
-    for student, scores in scores_dict.items():
+    for student, scores in scores.items():
         # Calculate the average score
         if scores:  # Check if the list of scores is not empty
             average = sum(scores) / len(scores)
@@ -27,5 +27,5 @@ student_scores = {
     "David": []
 }
 
-average_scores = calculate_average_scores(student_scores)
+average_scores = cas(student_scores)
 print("Average Scores:", average_scores)

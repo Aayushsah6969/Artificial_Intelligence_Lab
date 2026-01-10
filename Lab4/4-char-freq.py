@@ -17,6 +17,6 @@ def char_frequency(input_string):
     return frequency_dict
 
 # Example usage
-input_str = "hello world computer lab"
+input_str = "hello"
 result = char_frequency(input_str)
 print("Character Frequencies:", result)
