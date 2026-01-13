@@ -3,18 +3,12 @@
 # dictionary.
 
 def cas(scores):
-    # Create an empty dictionary to store average scores
     average_scores = {}
-    
-    # Loop through each student and their scores in the input dictionary
     for student, scores in scores.items():
-        # Calculate the average score
         if scores:  # Check if the list of scores is not empty
             average = sum(scores) / len(scores)
         else:
             average = 0  # If no scores, set average to 0
-        
-        # Store the average score in the new dictionary
         average_scores[student] = average
     
     return average_scores
