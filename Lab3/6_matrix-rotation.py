@@ -4,6 +4,7 @@
 
 def rotate_matrix(matrix):
     n = len(matrix)
+    print(f"length is {n}")
     # Transpose the matrix
     for i in range(n):
         for j in range(i, n):
@@ -13,7 +14,6 @@ def rotate_matrix(matrix):
         matrix[i].reverse()
     return matrix
 
-# Example usage:
 matrix = [
     [1, 2, 3],
     [4, 5, 6],
