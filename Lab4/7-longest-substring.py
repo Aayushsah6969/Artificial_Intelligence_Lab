@@ -8,18 +8,11 @@ def longest_unique_substring(input_string):
     char_index_map = {}
     
     for i, char in enumerate(input_string):
-        # If the character is already in the map and its index is within the current window
         if char in char_index_map and char_index_map[char] >= start:
-            # Move the start to the next position after the last occurrence of the character
             start = char_index_map[char] + 1
-        
-        # Update the character's latest index
         char_index_map[char] = i
-        
-        # Calculate the length of the current substring
         current_length = i - start + 1
         
-        # Update max_length and longest_substr if we found a longer substring
         if current_length > max_length:
             max_length = current_length
             longest_substr = input_string[start:i+1]

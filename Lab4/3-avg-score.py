@@ -5,10 +5,10 @@
 def cas(scores):
     average_scores = {}
     for student, scores in scores.items():
-        if scores:  # Check if the list of scores is not empty
+        if scores:  
             average = sum(scores) / len(scores)
         else:
-            average = 0  # If no scores, set average to 0
+            average = 0  
         average_scores[student] = average
     
     return average_scores
