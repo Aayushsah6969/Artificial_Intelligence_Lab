@@ -6,3 +6,4 @@ def fib(n):
 n = 7
 for i in range(n):
     print(fib(i), end=" ")
+
