@@ -1,0 +1,20 @@
+function UCS(start, goal):
+    priorityQueue = [(start, 0)]
+    visited = {start: 0}
+    parent = {start: None}
+    
+    while priorityQueue not empty:
+        node, cost = priorityQueue.pop_min()
+        
+        if node == goal:
+            return reconstructPath(parent, goal)
+        
+        for neighbor in neighbors(node):
+            newCost = cost + edgeCost(node, neighbor)
+            
+            if neighbor not in visited OR newCost < visited[neighbor]:
+                visited[neighbor] = newCost
+                parent[neighbor] = node
+                priorityQueue.push((neighbor, newCost))
+    
+    return None
